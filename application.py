@@ -25,8 +25,6 @@ def predict():
         new_data=standardising_model.transform([[ Temperature,RH,Ws,Rain,FFMC,DMC,DC,ISI,BUI]])
         result=ridge_model.predict(new_data)
         return render_template('home.html',results=result[0])
-        
-        
     return render_template('home.html')
 
 if __name__ == '__main__':
